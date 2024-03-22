@@ -2,6 +2,11 @@ package hello
 
 import "fmt"
 
-func SayHello() {
-	fmt.Printf("Hello, World!\n")
+func SayHello(name string) {
+	if name == "" {
+		name = "NO NAME PROVIDED"
+		return
+	}
+
+	fmt.Printf("Hello, %s!\n", name)
 }
